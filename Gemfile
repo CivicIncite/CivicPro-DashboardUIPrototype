@@ -8,6 +8,17 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
+# Use react for some front-end wizardry
+gem "react-rails"
+# Use bootstrap as a base
+gem 'bootstrap', '~> 4.0.0.alpha6'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+# sprockets
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+# font-awesome for icons
+gem "font-awesome-rails"
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
