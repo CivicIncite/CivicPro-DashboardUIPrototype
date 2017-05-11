@@ -1,0 +1,28 @@
+<div class="col-sm-12 col-md-3 column">
+  <div class="d-flex justify-content-between align-items-end">
+    <h1 class="mb-3"><%= record_column %></h1>
+    <%= fa_icon "table", class: "mb-3" %>
+  </div>
+  <div class="card">
+    <div class="card-header d-flex justify-content-between">
+      <a class="p-0" href="">
+        <%= fa_icon "search", text: "Search" %>
+      </a>
+      <div class="dropdown">
+        <a class="nav-link dropdown-toggle p-0" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Newest first
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Newest first</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Oldest first</a>
+        </div>
+      </div>
+    </div>
+    <% @records.each do |record| %>
+      <% if record.record_type == record_column %>
+        <%= render(:partial => 'record_card', locals: {record: record})%>
+      <% end %>
+    <% end %>
+  </div>
+</div>

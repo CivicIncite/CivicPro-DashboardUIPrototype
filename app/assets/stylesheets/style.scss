@@ -9,15 +9,6 @@ body {
 .navbar {
   box-shadow: 0 2px 4px rgba(31, 54, 61, .15);
 
-  .nav-link,
-  a {
-    color: $gray-3;
-
-    &:hover {
-      color: $gray-2;
-    }
-  }
-
   .nav-link {
     font-size: 1em;
     font-weight: bold;
@@ -39,7 +30,12 @@ body {
     color: $gray-3;
     font-family: $primary-font;
     padding: .5em 1em;
-    width: 300px;
+    width: 200px;
+    transition: width .2s ease-in;
+
+    &:focus {
+      width: 300px;
+    }
   }
 
   input{
@@ -58,13 +54,56 @@ body {
   }
 }
 
+.nav-link,
+a {
+  color: $gray-3;
+
+  &:hover {
+    color: $gray-2;
+    text-decoration: none;
+  }
+}
+
+.dropdown {
+  i {
+    margin-right: .25em;
+  }
+}
+
+.dropdown-toggle-iconless::after {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  content: none;
+}
+
+.dropdown-menu {
+  transform: translate3d(0px, -7px, 0px);
+  pointer-events: none;
+  transition: transform .3s cubic-bezier(.42, 0, .04, 1.75),
+              opacity .2s ease-in;
+}
+
+.show > .dropdown-menu {
+    transform: translate3d(0px, 3px, 0px);
+    pointer-events: all;
+}
+
+.nav-dropdown-menu {
+    top: 3rem;
+}
+
 .logo {
   height: 2em;
   left: 50%;
   margin-top: -1em;
-  margin-left: -4.5em;
+  margin-left: -1em;
   position: absolute;
   top: 50%;
+
+  @media(min-width: 992px){
+    margin-left: -4.5em;
+  }
 }
 
 .container-fluid {
@@ -98,9 +137,54 @@ body {
       border-radius: 0;
     }
   }
+
+  .card-block + .card-block {
+    border-top: 1px solid $gray-5;
+  }
 }
 
 h1 {
-  font-size: (26 / 16) * 1rem;
+  font-size: (26 / 16) * 1em;
   font-weight: bold;
+}
+
+h3 {
+  font-size: (20 / 16) * 1em;
+  line-height: (26 / 20) * 1em;
+}
+
+p {
+  font-size: 1em;
+  color: $black;
+
+  &.muted {
+    font-size: (14 / 16) * 1em;
+    line-height: (18 / 16) * 1em;
+    color: $gray-3;
+  }
+}
+
+.record-item-star {
+  color: $gray-4;
+  font-size: 1em;
+
+  &.active {
+    color: $blue-primary;
+  }
+}
+
+.badge {
+  font-size: (12 / 16) * 1em;
+  font-weight: bold;
+  border-radius: 1em;
+  padding: 4px 10px;
+}
+
+.badge-primary {
+  color: $blue-1;
+  background: $blue-4;
+}
+
+.btn-link {
+  color: $blue-primary;
 }

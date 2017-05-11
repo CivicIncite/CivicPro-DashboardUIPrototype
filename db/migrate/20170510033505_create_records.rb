@@ -4,7 +4,8 @@ class CreateRecords < ActiveRecord::Migration[5.0]
       t.text :description
       t.string :government
       t.string :agency
-      t.string :type
+      t.string :record_type
+      t.datetime :date
 
       t.timestamps
     end

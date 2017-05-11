@@ -19,7 +19,8 @@ ActiveRecord::Schema.define(version: 20170510033505) do
     t.text     "description"
     t.string   "government"
     t.string   "agency"
-    t.string   "type"
+    t.string   "record_type"
+    t.datetime "date"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

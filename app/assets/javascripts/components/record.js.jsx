@@ -8,11 +8,12 @@ var Record = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <div>Description: {this.props.description}</div>
-        <div>Date: {this.props.date}</div>
+      <div class="card-block">
+        <h3>{this.props.agency}</h3>
+        <p class="muted">{this.props.date}</p>
+        <p>{this.props.description}</p>
+
         <div>Government: {this.props.government}</div>
-        <div>Agency: {this.props.agency}</div>
       </div>
     );
   }
