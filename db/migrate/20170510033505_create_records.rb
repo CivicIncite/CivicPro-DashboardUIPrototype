@@ -6,7 +6,7 @@ class CreateRecords < ActiveRecord::Migration[5.0]
       t.string :agency
       t.string :record_type
       t.datetime :date
-      t.string :status
+      t.string :legislation_status
 
       t.timestamps
     end

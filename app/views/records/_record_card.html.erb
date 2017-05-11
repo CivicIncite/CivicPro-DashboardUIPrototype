@@ -7,12 +7,12 @@
   <p><%= record.description %></p>
   <div class="d-flex justify-content-between align-items-end">
     <% if record.record_type == 'Legislative Status' %>
-      <% if (record.status = 'Approved') || (record.status = 'Passed on 1st Reading') || (record.status = 'Passed on 2nd Reading') %>
-        <span class="badge badge-success"><%= record.status %></span>
-      <% elsif (record.status = 'Withdrawn') || (record.status = 'Denied') %>
-        <span class="badge badge-danger"><%= record.status %></span>
-      <% elsif record.status = 'Deferred' %>
-        <span class="badge badge-primary"><%= record.status %></span>
+      <% if (record.legislation_status = 'Approved') || (record.legislation_status = 'Passed on 1st Reading') || (record.legislation_status = 'Passed on 2nd Reading') %>
+        <span class="badge badge-success"><%= record.legislation_status %></span>
+      <% elsif (record.legislation_status = 'Withdrawn') || (record.legislation_status = 'Denied') %>
+        <span class="badge badge-danger"><%= record.legislation_status %></span>
+      <% elsif record.legislation_status = 'Deferred' %>
+        <span class="badge badge-primary"><%= record.legislation_status %></span>
       <% else %>
       <% end %>
     <% else %>
