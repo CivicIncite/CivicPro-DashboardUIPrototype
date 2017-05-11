@@ -1,11 +1,13 @@
 body {
-  font-family: $primary-font;
+  -webkit-font-smoothing: antialiased;
   background: #fefefe;
+  color: $black;
+  font-family: $primary-font;
+  line-height: 1.4;
 }
 
 .navbar {
   box-shadow: 0 2px 4px rgba(31, 54, 61, .15);
-  position: fixed;
 
   .nav-link,
   a {
@@ -31,11 +33,12 @@ body {
   }
 
   .form-control {
-    font-family: $primary-font;
-    border-radius: 2em;
     background: $gray-6;
-    padding: .5em 1em;
+    border-radius: 2em;
+    border: 1px solid $gray-5;
     color: $gray-3;
+    font-family: $primary-font;
+    padding: .5em 1em;
     width: 300px;
   }
 
@@ -64,6 +67,40 @@ body {
   top: 50%;
 }
 
-.container {
-  padding: 4em 0;
+.container-fluid {
+  margin-top: (40 / 16) * 1rem;
+
+  .column {
+    h1 + i {
+      font-size: 1.25em;
+    }
+  }
+}
+
+.card {
+  border: 1px solid $gray-5;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 $gray-5;
+
+  .card-header,
+  .card-block {
+    padding: 1em .75em;
+  }
+
+  .card-header {
+    background: $gray-5;
+    border-bottom: 0;
+
+    .form-control {
+      background: 0;
+      border: 0;
+      padding: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+h1 {
+  font-size: (26 / 16) * 1rem;
+  font-weight: bold;
 }
