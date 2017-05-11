@@ -7,7 +7,11 @@ body {
 }
 
 .navbar {
+  background: $white;
   box-shadow: 0 2px 4px rgba(31, 54, 61, .15);
+  position: fixed;
+  top: 0;
+  z-index: 10;
 
   .nav-link {
     font-size: 1em;
@@ -107,7 +111,7 @@ a {
 }
 
 .container-fluid {
-  margin-top: (40 / 16) * 1rem;
+  margin-top: 5em;
 
   .column {
     h1 + i {
