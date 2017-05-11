@@ -185,6 +185,16 @@ p {
   background: $blue-4;
 }
 
+.badge-danger {
+  color: $white;
+  background: $red;
+}
+
+.badge-success {
+  color: $white;
+  background: $green;
+}
+
 .btn-link {
   color: $blue-primary;
 }

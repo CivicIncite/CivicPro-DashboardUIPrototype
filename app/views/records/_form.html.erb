@@ -21,6 +21,10 @@
       <%= f.select(:record_type, ['Code Amendments', 'Legislative Status', 'Lobbyist Registrations', 'Public Meetings'], {}) %>
     </div>
     <div class="field">
+      <%= f.label :status %>
+      <%= f.select(:status, ['Approved', 'Deferred', 'Withdrawn', 'Denied', 'Passed on 1st Reading', 'Passed on 2nd Reding'], {}) %>
+    </div>
+    <div class="field">
       <%= f.label :government %><br>
       <%= f.text_field :government%>
     </div>
