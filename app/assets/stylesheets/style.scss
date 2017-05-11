@@ -1,3 +1,62 @@
 body {
-  font-family: $primary-font
+  font-family: $primary-font;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(31, 54, 61, .15);
+
+  .nav-link,
+  a {
+    color: $gray-3;
+
+    &:hover {
+      color: $gray-2;
+    }
+  }
+
+  .nav-link {
+    font-size: 1em;
+    font-weight: bold;
+    padding: .75rem 0;
+
+    &.active {
+      border-bottom: 3px solid $blue-primary;
+    }
+
+    i {
+      margin-right: .25em;
+    }
+  }
+
+  .form-control {
+    font-family: $primary-font;
+    border-radius: 2em;
+    background: $gray-6;
+    padding: .5em 1em;
+    color: $gray-3;
+  }
+
+  input{
+    &::-webkit-input-placeholder {
+     color: $gray-3;
+    }
+    &:-moz-placeholder {
+       color: $gray-3;
+    }
+    &::-moz-placeholder {
+       color: $gray-3;
+    }
+    &:-ms-input-placeholder {
+       color: $gray-3;
+    }
+  }
+}
+
+.logo {
+  height: 2em;
+  left: 50%;
+  margin-top: -1em;
+  margin-left: -4.5em;
+  position: absolute;
+  top: 50%;
 }
