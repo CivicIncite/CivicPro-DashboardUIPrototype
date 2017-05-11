@@ -4,7 +4,7 @@
     <%= fa_icon "star", class:"record-item-star"%>
   </div>
   <p class="muted"><%= record.date %></p>
-  <p><%= record.description %></p>
+  <p class="record-description"><%= record.description %></p>
   <div class="d-flex justify-content-between align-items-end">
     <% if record.record_type == 'Legislative Status' %>
       <% if (record.legislation_status = 'Approved') || (record.legislation_status = 'Passed on 1st Reading') || (record.legislation_status = 'Passed on 2nd Reading') %>

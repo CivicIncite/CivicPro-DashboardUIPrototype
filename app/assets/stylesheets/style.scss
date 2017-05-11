@@ -198,3 +198,10 @@ p {
 .btn-link {
   color: $blue-primary;
 }
+
+.record-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
