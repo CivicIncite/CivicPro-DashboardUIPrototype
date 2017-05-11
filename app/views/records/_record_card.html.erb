@@ -18,6 +18,7 @@
     <% else %>
       <span class="badge badge-primary"><%= record.government %></span>
     <% end %>
-    <a href="#" class="btn-link">View details</a>
+    <a href="#" data-toggle="modal" data-target="#details-modal" class="btn-link">View details</a>
+    <%= link_to 'View Details', record, remote: true %>
   </div>
 </div>

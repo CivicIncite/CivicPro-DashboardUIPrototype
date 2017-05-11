@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  principal: MyString
+  date: 2017-05-11 18:40:54
+  description: MyText
+  fee: 9.99
+  government: MyString
+
+two:
+  name: MyString
+  principal: MyString
+  date: 2017-05-11 18:40:54
+  description: MyText
+  fee: 9.99
+  government: MyString

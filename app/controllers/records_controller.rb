@@ -1,6 +1,7 @@
 class RecordsController < ApplicationController
   def index
     @records = Record.all
+    @lobbyists = Lobbyist.all
   end
 
   # GET /resources/new
@@ -19,6 +20,16 @@ class RecordsController < ApplicationController
         format.json { render json: @record.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def show
+    @record = Record.find(params[:id])
+
+    respond_to do |format|
+        format.html # show.html.erb
+        format.js # show.js.erb
+        format.json { render json: @record }
+      end
   end
 
   def record_params

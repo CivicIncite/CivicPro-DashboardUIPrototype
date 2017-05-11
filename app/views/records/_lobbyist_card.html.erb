@@ -1,0 +1,13 @@
+<div class="card-block">
+  <div class="d-flex justify-content-between align-items-center">
+    <h3 class="mb-0"><%= lobbyist.name %></h3>
+    <%= fa_icon "star", class:"record-item-star"%>
+  </div>
+  <p class="muted"><%= lobbyist.date %></p>
+  <p class="record-description"><%= lobbyist.description %></p>
+  <div class="d-flex justify-content-between align-items-end">
+    <span class="badge badge-primary"><%= lobbyist.government %></span>
+    <a href="#" data-toggle="modal" data-target="#details-modal" class="btn-link">View details</a>
+    <%= link_to 'View Details', lobbyist, remote: true %>
+  </div>
+</div>

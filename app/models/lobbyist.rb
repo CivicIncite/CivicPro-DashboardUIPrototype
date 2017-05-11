@@ -1,0 +1,2 @@
+class Lobbyist < ApplicationRecord
+end

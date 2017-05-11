@@ -1,6 +1,6 @@
 <div class="col-sm-12 col-md-3 column">
   <div class="d-flex justify-content-between align-items-end">
-    <h1 class="mb-3"><%= record_column %></h1>
+    <h1 class="mb-3"><%= column_name %></h1>
     <%= fa_icon "table", class: "mb-3" %>
   </div>
   <div class="card">
@@ -19,9 +19,15 @@
         </div>
       </div>
     </div>
-    <% @records.each do |record| %>
-      <% if record.record_type == record_column %>
-        <%= render(:partial => 'record_card', locals: {record: record})%>
+    <% if data == 'record' %>
+      <% @records.each do |record| %>
+        <% if record.record_type == column_name %>
+          <%= render(partial: 'record_card', locals: {record: record})%>
+        <% end %>
+      <% end %>
+    <% else %>
+      <% @lobbyists.each do |lobbyist| %>
+        <%= render(partial: 'lobbyist_card', locals: {lobbyist: lobbyist})%>
       <% end %>
     <% end %>
   </div>

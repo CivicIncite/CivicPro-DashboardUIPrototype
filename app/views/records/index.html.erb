@@ -1,8 +1,9 @@
 <div class="container-fluid">
   <div class="row">
-    <%= render(:partial => 'record_column', locals: {record_column: 'Code Amendments'})%>
-    <%= render(:partial => 'record_column', locals: {record_column: 'Legislative Status'})%>
-    <%= render(:partial => 'record_column', locals: {record_column: 'Lobbyist Registrations'})%>
-    <%= render(:partial => 'record_column', locals: {record_column: 'Public Meetings'})%>
+    <%= render(:partial => 'column', locals: {column_name: 'Code Amendments', data: 'record'})%>
+    <%= render(:partial => 'column', locals: {column_name: 'Legislative Status', data: 'record'})%>
+    <%= render(:partial => 'column', locals: {column_name: 'Lobbyist Registrations', data: 'lobbyist'})%>
+    <%= render(:partial => 'column', locals: {column_name: 'Public Meetings', data: 'record'})%>
   </div>
+  <%= render partial: "modal" %>
 </div>
