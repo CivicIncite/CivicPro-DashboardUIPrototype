@@ -26,6 +26,15 @@ class RecordsController < ApplicationController
     @record = Record.find(params[:id])
   end
 
+  def legislative_archives
+  end
+
+  def preferences
+  end
+
+  def code_amendments
+  end
+
   def record_params
     params.require(:record).permit(:description, :government, :agency, :record_type, :date, :legislation_status)
   end

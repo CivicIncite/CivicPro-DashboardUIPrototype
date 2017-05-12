@@ -3,8 +3,10 @@
     <h3 class="mb-0"><%= lobbyist.name %></h3>
     <%= fa_icon "star", class:"record-item-star"%>
   </div>
-  <p class="muted"><%= lobbyist.date.strftime("%b %d, %Y") %></p>
-  <p class="record-description"><%= lobbyist.description %></p>
+  <% if lobbyist.date %>
+    <p class="muted"><%= lobbyist.date.strftime("%b %d, %Y") %></p>
+    <p class="record-description"><%= lobbyist.description %></p>
+  <% end %>
   <div class="d-flex justify-content-between align-items-end">
     <span class="badge badge-primary"><%= lobbyist.government %></span>
     <%= link_to 'View details', lobbyist_path(lobbyist), data: {toggle: "modal", target: "#view-details"}, remote: true %>
@@ -25,8 +27,10 @@
        <span class="note"><%= lobbyist.description %></span>
        <p class="font-weight-bold mt-2">Government</p>
        <span class="note"><%= lobbyist.government %></span>
-       <p class="font-weight-bold mt-2">Date</p>
-       <span class="note"><%= lobbyist.date.strftime("%b %d, %Y") %></span>
+       <% if lobbyist.date %>
+        <p class="font-weight-bold mt-2">Date</p>
+        <span class="note"><%= lobbyist.date.strftime("%b %d, %Y") %></span>
+        <% end %>
        <p class="font-weight-bold mt-2">Fee</p>
        <span class="note"><%= lobbyist.fee %> per hour</span>
      </div>

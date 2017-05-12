@@ -1,7 +1,7 @@
 <div class="col-sm-12 col-md-3 column">
   <div class="d-flex justify-content-between align-items-center mb-2">
     <h1><%= column_name %></h1>
-    <a href="#" class="view-all-icon" data-toggle="tooltip" data-placement="bottom" title="View all">
+    <a href="/code-amendments" class="view-all-icon" data-toggle="tooltip" data-placement="bottom" title="View all">
       <%= fa_icon "table" %>
     </a>
   </div>
@@ -21,17 +21,19 @@
         </div>
       </div>
     </div>
-    <% if data == 'record' %>
-      <% @records.each do |record| %>
-        <% if record.record_type == column_name %>
-          <%= render(partial: 'record_card', locals: {record: record})%>
+    <div class="scroll-section">
+      <% if data == 'record' %>
+        <% @records.each do |record| %>
+          <% if record.record_type == column_name %>
+            <%= render(partial: 'record_card', locals: {record: record})%>
+          <% end %>
+        <% end %>
+      <% else %>
+        <% @lobbyists.each do |lobbyist| %>
+          <%= render(partial: 'lobbyist_card', locals: {lobbyist: lobbyist})%>
         <% end %>
       <% end %>
-    <% else %>
-      <% @lobbyists.each do |lobbyist| %>
-        <%= render(partial: 'lobbyist_card', locals: {lobbyist: lobbyist})%>
-      <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
 
