@@ -18,7 +18,28 @@
     <% else %>
       <span class="badge badge-primary"><%= record.government %></span>
     <% end %>
-    <a href="#" data-toggle="modal" data-target="#details-modal" class="btn-link">View details</a>
-    <%= link_to 'View Details', record, remote: true %>
+    <%= link_to 'View details', record_path(record), data: {toggle: "modal", target: "#view-details"}, remote: true %>
   </div>
+</div>
+
+<div class="modal fade" id="view-details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h4 class="modal-title" id="myModalLabel"><%= record.agency %></h4>
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+     </div>
+     <div class="modal-body">
+       <p class="font-weight-bold">Details</p>
+       <span class="note"><%= record.description %></span>
+       <p class="font-weight-bold mt-2">Government</p>
+       <span class="note"><%= record.government %></span>
+       <p class="font-weight-bold mt-2">Date</p>
+       <span class="note"><%= record.date %></span>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+     </div>
+   </div>
+ </div>
 </div>

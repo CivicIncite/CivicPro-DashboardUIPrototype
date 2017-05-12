@@ -19,12 +19,6 @@ class LobbyistsController < ApplicationController
 
   def show
     @lobbyist = Lobbyist.find(params[:id])
-
-    respond_to do |format|
-        format.html # show.html.erb
-        format.js # show.js.erb
-        format.json { render json: @lobbyist }
-      end
   end
 
   def lobbyist_params

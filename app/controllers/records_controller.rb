@@ -24,12 +24,6 @@ class RecordsController < ApplicationController
 
   def show
     @record = Record.find(params[:id])
-
-    respond_to do |format|
-        format.html # show.html.erb
-        format.js # show.js.erb
-        format.json { render json: @record }
-      end
   end
 
   def record_params
