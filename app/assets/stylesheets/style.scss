@@ -112,12 +112,25 @@ a {
 
 .container-fluid {
   padding-top: 5em;
-  height: calc(100vh - 49px);
+
+  @media(min-width: 992px){
+    height: calc(100vh - 49px);
+  }
 
   .column {
+    margin-top: 2em;
     h1 + i {
       font-size: 1.25em;
     }
+    @media(min-width: 992px){
+      margin-top: 0;
+    }
+  }
+}
+
+.lg-h-100 {
+  @media(min-width: 992px){
+    height: 100% !important;
   }
 }
 
