@@ -142,7 +142,7 @@ a {
     }
   }
 
-  .card-block + .card-block {
+  .card-block + div.modal + .card-block {
     border-top: 1px solid $gray-5;
   }
 }
@@ -171,9 +171,12 @@ p {
 .record-item-star {
   color: $gray-4;
   font-size: 1em;
+  transition: color .2s ease-in;
 
-  &.active {
+  &.active,
+  &:hover {
     color: $blue-primary;
+    cursor: pointer;
   }
 }
 
@@ -208,4 +211,8 @@ p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.view-all-icon {
+  font-size: (20 / 16) * 1em;
 }
