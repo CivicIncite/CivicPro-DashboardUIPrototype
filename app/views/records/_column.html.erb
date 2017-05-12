@@ -1,11 +1,11 @@
-<div class="col-sm-12 col-md-3 column">
+<div class="col-sm-12 col-md-3 column h-100">
   <div class="d-flex justify-content-between align-items-center mb-2">
     <h1><%= column_name %></h1>
     <a href="/code-amendments" class="view-all-icon" data-toggle="tooltip" data-placement="bottom" title="View all">
       <%= fa_icon "table" %>
     </a>
   </div>
-  <div class="card">
+  <div class="card h-100">
     <div class="card-header d-flex justify-content-between">
       <a class="p-0" href="">
         <%= fa_icon "search", text: "Search" %>
@@ -36,9 +36,3 @@
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
