@@ -1,4 +1,7 @@
-<div class="ui form">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ui form">
   <%= form_for(@lobbyist) do |f| %>
     <% if @lobbyist.errors.any? %>
       <div id="error_explanation">
@@ -40,4 +43,7 @@
       <%= f.submit 'Save' %>
     </div>
   <% end %>
+</div>
+    </div>
+  </div>
 </div>

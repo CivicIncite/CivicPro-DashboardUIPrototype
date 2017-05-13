@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get '/archives', to: 'records#legislative_archives'
   get '/preferences', to: 'records#preferences'
   get '/code-amendments', to: 'records#code_amendments'
+  get '/admin', to: 'records#admin'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

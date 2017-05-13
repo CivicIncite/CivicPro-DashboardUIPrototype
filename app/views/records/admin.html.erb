@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="d-flex justify-content-between align-items-end">
+        <h2>Code Amendments, Legislative Status, and Public Meetings</h2>
+        <%= link_to 'Add record', new_record_path, class: "btn btn-primary" %>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Government</th>
+            <th>Agency</th>
+            <th>Record Type</th>
+            <th>Date</th>
+            <th>Legislative Status</th>
+          </tr>
+        </thead>
+        <% @records.each do |record| %>
+          <tr>
+            <td><%= record.description %></td>
+            <td><%= record.government %></td>
+            <td><%= record.agency %></td>
+            <td><%= record.record_type %></td>
+            <td><%= record.date %></td>
+            <td><%= record.legislation_status %></td>
+            <td><%= link_to 'Edit', edit_record_path(record) %></td>
+            <td><%= link_to 'Destroy',  record,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </table>
+
+      <div class="d-flex justify-content-between align-items-end mt-4">
+        <h2>Lobbyists</h2>
+        <%= link_to 'Add lobbyist', new_lobbyist_path, class: "btn btn-primary" %>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Principal</th>
+            <th>Description</th>
+            <th>Government</th>
+            <th>Date</th>
+            <th>Fee</th>
+          </tr>
+        </thead>
+        <% @lobbyists.each do |lobbyist| %>
+          <tr>
+            <td><%= lobbyist.name %></td>
+            <td><%= lobbyist.principal %></td>
+            <td><%= lobbyist.description %></td>
+            <td><%= lobbyist.government %></td>
+            <td><%= lobbyist.date %></td>
+            <td><%= lobbyist.fee %></td>
+            <td><%= link_to 'Edit', edit_lobbyist_path(lobbyist) %></td>
+            <td><%= link_to 'Destroy',  lobbyist,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

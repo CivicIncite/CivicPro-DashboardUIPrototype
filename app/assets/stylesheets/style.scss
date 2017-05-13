@@ -234,3 +234,16 @@ p {
 .scroll-section {
   overflow: auto;
 }
+
+.btn-primary {
+  background: $blue-primary;
+  border-color: $blue-primary;
+}
+
+.line-truncate {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400px;
+}
