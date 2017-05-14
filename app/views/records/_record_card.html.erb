@@ -31,11 +31,11 @@
      </div>
      <div class="modal-body">
        <p class="font-weight-bold">Details</p>
-       <span class="note"><%= record.description %></span>
+       <p class="note"><%= record.description %></p>
        <p class="font-weight-bold mt-2">Government</p>
-       <span class="note"><%= record.government %></span>
+       <p class="note"><%= record.government %></p>
        <p class="font-weight-bold mt-2">Date</p>
-       <span class="note"><% if record.date %><%= record.date.strftime("%b %d, %Y") %><% end %></span>
+       <p class="note"><% if record.date %><%= record.date.strftime("%b %d, %Y") %><% end %></p>
      </div>
      <div class="modal-footer">
        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

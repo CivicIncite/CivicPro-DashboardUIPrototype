@@ -15,7 +15,7 @@ body {
 
   .nav-link {
     font-size: (14 / 16) * 1em;
-    font-weight: $font-weight-light;
+    font-weight: $font-weight-heavy;
     padding: .75rem 0;
 
     &.active {
@@ -187,9 +187,10 @@ p {
   }
 }
 
-a {
+a,
+.dropdown-item {
   font-size: (14 / 16) * 1em;
-  font-weight: $font-weight-light
+  font-weight: $font-weight-light;
 }
 
 .record-item-star {
@@ -249,4 +250,8 @@ a {
 .btn-primary {
   background: $blue-primary;
   border-color: $blue-primary;
+}
+
+.font-weight-bold {
+  font-weight: $font-weight-heavy;
 }
