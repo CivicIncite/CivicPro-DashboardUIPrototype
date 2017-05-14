@@ -14,8 +14,8 @@ body {
   z-index: 10;
 
   .nav-link {
-    font-size: 1em;
-    font-weight: bold;
+    font-size: (14 / 16) * 1em;
+    font-weight: $font-weight-light;
     padding: .75rem 0;
 
     &.active {
@@ -33,6 +33,8 @@ body {
     border: 1px solid $gray-5;
     color: $gray-3;
     font-family: $primary-font;
+    font-size: (14 / 16) * 1em;
+    font-weight: $font-weight-light;
     padding: .5em 1em;
     width: 200px;
     transition: width .2s ease-in;
@@ -162,24 +164,32 @@ a {
 }
 
 h1 {
-  font-size: (26 / 16) * 1em;
-  font-weight: bold;
+  font-size: (20 / 16) * 1em;
+  font-weight: $font-weight-heavy;
 }
 
 h3 {
-  font-size: (20 / 16) * 1em;
-  line-height: (26 / 20) * 1em;
+  font-size: (16 / 16) * 1em;
+  line-height: (24 / 20) * 1em;
+  font-weight: $font-weight-light;
 }
 
 p {
   font-size: 1em;
   color: $black;
+  font-weight: $font-weight-light;
+  line-height: (24 / 16) * 1em;
 
   &.muted {
     font-size: (14 / 16) * 1em;
-    line-height: (18 / 16) * 1em;
+    line-height: (20 / 16) * 1em;
     color: $gray-3;
   }
+}
+
+a {
+  font-size: (14 / 16) * 1em;
+  font-weight: $font-weight-light
 }
 
 .record-item-star {
@@ -196,7 +206,7 @@ p {
 
 .badge {
   font-size: (12 / 16) * 1em;
-  font-weight: bold;
+  font-weight: $font-weight-heavy;
   border-radius: 1em;
   padding: 4px 10px;
 }
@@ -225,10 +235,11 @@ p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  max-height: 4.5em;
 }
 
 .view-all-icon {
-  font-size: (20 / 16) * 1em;
+  font-size: (16 / 16) * 1em;
 }
 
 .scroll-section {

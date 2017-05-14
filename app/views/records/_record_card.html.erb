@@ -3,7 +3,7 @@
     <h3 class="mb-0"><%= record.agency %></h3>
     <%= fa_icon "star", class:"record-item-star"%>
   </div>
-  <p class="muted"><% if record.date %><%= record.date.strftime("%b %d, %Y") %><% end %></p>
+  <p class="muted mt-1"><% if record.date %><%= record.date.strftime("%b %d, %Y") %><% end %></p>
   <p class="record-description"><%= record.description %></p>
   <div class="d-flex justify-content-between align-items-end">
     <% if record.record_type == 'Legislative Status' %>

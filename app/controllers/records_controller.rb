@@ -2,8 +2,8 @@ class RecordsController < ApplicationController
   before_action :set_record, only: [:edit, :update, :destroy]
 
   def index
-    @records = Record.all
-    @lobbyists = Lobbyist.all
+    @records = Record.order('date DESC')
+    @lobbyists = Lobbyist.order('date DESC')
   end
 
   # GET /resources/new

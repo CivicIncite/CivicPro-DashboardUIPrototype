@@ -4,7 +4,7 @@
     <title>CivicIncite</title>
     <%= csrf_meta_tags %>
     <!-- Typekit Font -->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,500" rel="stylesheet">
     <!-- Mobile Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -21,12 +21,12 @@
         <ul class="navbar-nav d-flex flex-row">
           <li class="nav-item">
             <a class="nav-link <% if current_page?(root_url) %>active<% end %>" href="/">
-              <%= fa_icon "home", text: "Dashboard" %>
+              Dashboard
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link <% if current_page?('/archives') %>active<% end %> ml-3" href="/archives">
-              <%= fa_icon "table", text: "Archives" %>
+              Archives
             </a>
           </li>
         </ul>
