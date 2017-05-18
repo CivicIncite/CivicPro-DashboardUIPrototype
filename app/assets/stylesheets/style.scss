@@ -255,3 +255,7 @@ a,
 .font-weight-bold {
   font-weight: $font-weight-heavy;
 }
+
+.disclaimers > p {
+  font-size: (12 / 16) * 1rem;
+}
