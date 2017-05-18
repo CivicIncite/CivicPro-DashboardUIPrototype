@@ -37,7 +37,15 @@
           </div>
           <div class="field">
             <%= f.label :date %><br>
-            <%= f.date_select :date, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+            <%= f.datetime_select :date, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+          </div>
+          <div class="field">
+            <%= f.label :address %><br>
+            <%= f.text_field :address %>
+          </div>
+          <div class="field">
+            <%= f.label :agenda_link %><br>
+            <%= f.text_field :url %>
           </div>
           <div class="actions">
             <%= f.submit 'Save' %>

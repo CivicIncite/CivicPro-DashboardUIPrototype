@@ -1,7 +1,6 @@
 class LobbyistsController < ApplicationController
   before_action :set_lobbyist, only: [:edit, :update, :destroy]
 
-  # GET /resources/new
   def new
     @lobbyist = Lobbyist.new
   end

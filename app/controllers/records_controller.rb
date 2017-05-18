@@ -6,7 +6,6 @@ class RecordsController < ApplicationController
     @lobbyists = Lobbyist.order('date DESC')
   end
 
-  # GET /resources/new
   def new
     @record = Record.new
   end
@@ -16,7 +15,7 @@ class RecordsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @record.update(resource_params)
+      if @record.update(record_params)
         format.html { redirect_to action: :admin, notice: 'Record was successfully updated.' }
         format.json { render :show, status: :ok, location: @record }
       else
@@ -68,6 +67,6 @@ class RecordsController < ApplicationController
     end
 
   def record_params
-    params.require(:record).permit(:description, :government, :agency, :record_type, :date, :legislation_status)
+    params.require(:record).permit(:description, :government, :agency, :record_type, :date, :legislation_status, :address, :url)
   end
 end

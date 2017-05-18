@@ -34,8 +34,15 @@
        <p class="note"><%= record.description %></p>
        <p class="font-weight-bold mt-2">Government</p>
        <p class="note"><%= record.government %></p>
-       <p class="font-weight-bold mt-2">Date</p>
-       <p class="note"><% if record.date %><%= record.date.strftime("%b %d, %Y") %><% end %></p>
+       <p class="font-weight-bold mt-2">Date and Time</p>
+       <p class="note"><% if record.date %><%= record.date.strftime("%b %d, %Y at %l:%M %p") %><% end %></p>
+       <p class="font-weight-bold mt-2">Address</p>
+       <p class="note"><%= record.government %></p>
+       <a href="<%= record.url %>" class="btn btn-outline-primary mb-3">Download the agenda</a>
+       <hr>
+       <p class="font-weight-bold mt-2">Disclaimers:</p>
+       <p class="font-italic">The meeting item above may not be final and is subject to change or cancellation.</p>
+       <p class="font-italic">Specific agenda items may not be scheduled for a time certain and may be heard out of order or tabled for a later meeting. Meeting time indicates the hour when the meeting will begin.</p>
      </div>
      <div class="modal-footer">
        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
