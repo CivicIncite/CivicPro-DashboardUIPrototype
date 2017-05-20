@@ -47,7 +47,7 @@
                 <td><%= record.description %></td>
                 <td><%= record.government %></td>
                 <td><%= record.agency %></td>
-                <td><%= record.date.strftime("%b %d, %Y at %l:%M %p") %></td>
+                <td class="text-nowrap"><%= record.date.strftime("%b %d, %Y at %l:%M %p") %></td>
                 <td>
                     <% if record.url %>
                         <%= link_to "Download agenda", record.url, class: "btn btn-outline-primary btn-sm" %>
