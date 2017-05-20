@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   resources :lobbyists
-  root 'records#index'
+  root 'records#dashboard'
   resources :records
-  get '/archives', to: 'records#legislative_archives'
+  get '/archives', to: 'records#archives'
   get '/preferences', to: 'records#preferences'
-  get '/code-amendments', to: 'records#code_amendments'
   get '/admin', to: 'records#admin'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

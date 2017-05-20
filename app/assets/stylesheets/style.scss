@@ -247,9 +247,23 @@ a,
   overflow: auto;
 }
 
+btn:hover {
+    cursor: pointer;
+}
+
 .btn-primary {
   background: $blue-primary;
   border-color: $blue-primary;
+}
+
+.btn-outline-primary {
+    border-color: $blue-primary;
+    color: $blue-primary;
+
+    &:hover {
+        background-color: $blue-primary;
+        border-color: $blue-primary;
+    }
 }
 
 .font-weight-bold {
@@ -258,4 +272,22 @@ a,
 
 .disclaimers > p {
   font-size: (12 / 16) * 1rem;
+}
+
+table {
+    border: 1px solid $gray-5;
+    box-shadow: 0 2px 0 $gray-5;
+}
+
+thead {
+    background-color: $gray-5;
+    color: $gray-2;
+}
+
+td {
+    font-weight: $font-weight-light;
+}
+
+.no-display {
+    display: none;
 }

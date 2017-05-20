@@ -1,0 +1,249 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="mb-4">
+          <h4 class="mb-4 mr-4">Legislative Archives</h4>
+          <form method="GET">
+              <div class="row mb-4">
+                  <div class="col-sm-12 col-md-6">
+                    <label for="">Search</label>
+                    <input type="text" class="form-control" name='term' placeholder="Search for topic or keyword" <% if(params.has_key?(:term)) %>value="<%= params[:term]%>"<%end%>>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                      <div class="row">
+                          <div class="col-sm-12 col-md-6">
+                                <label for="">Government</label>
+                                <input type="text" class="form-control mb-4" placeholder="Government">
+                                <label for="">Start Date</label>
+                                <input type="date" class="form-control" placeholder="Start date" aria-describedby="basic-addon1">
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                                <label for="">Agency</label>
+                                <input type="text" class="form-control mb-4" placeholder="Agency">
+                                <label for="">End Date</label>
+                                <input type="date" class="form-control" placeholder="End date" aria-describedby="basic-addon1">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn btn-primary mb-6">Search</button>
+              </div>
+          </form>
+      </div>
+      <% if(params.has_key?(:term)) %>
+        <p class="font-italic">Displaying results for "<%= params[:term] %>"</p>
+      <% end %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Government</th>
+            <th>Meeting</th>
+            <th>Date</th>
+            <th>Agenda</th>
+            <th>Minutes</th>
+          </tr>
+        </thead>
+        <% if(params.has_key?(:term)) %>
+            <tr>
+              <td>Miami-Dade County</td>
+              <td>Board of County Commissioners Meeting</td>
+              <td>5/2/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>City Commission Meeting</td>
+              <td>4/26/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami</td>
+              <td>City Commission - Planning and Zoning Meeting</td>
+              <td>3/23/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>Miami-Dade County</td>
+              <td>Board of County Commissioners Meeting</td>
+              <td>3/16/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami</td>
+              <td>City Commission - Regular Meeting </td>
+              <td>3/9/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>City Commission Meeting</td>
+              <td>3/1/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>City Commission Meeting</td>
+              <td>1/25/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>Miami-Dade County</td>
+              <td>Board of County Commissioners Meeting</td>
+              <td>11/1/16</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>City Commission Meeting</td>
+              <td>10/19/16</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>City Commission Meeting</td>
+              <td>9/14/16</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>City Commission Meeting</td>
+              <td>7/21/16</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>City Commission Meeting</td>
+              <td>5/11/16</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>City Commission Meeting</td>
+              <td>3/9/16</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>City Commission Meeting</td>
+              <td>1/13/16</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+        <% else %>
+            <tr>
+              <td>City of Miami</td>
+              <td>City Commission - Planning and Zoning Meeting</td>
+              <td>5/25/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>Planning Board Meeting</td>
+              <td>5/23/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami</td>
+              <td>Planning Zoning and Appeal Board Meeting</td>
+              <td>5/17/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>City Commission Meeting</td>
+              <td>5/12/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>Miami-Dade County</td>
+              <td>Economic Development and Tourism Committee Meeting</td>
+              <td>5/11/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>Miami-Dade County</td>
+              <td>Miami-Dade Transportation and Public Works Committee Meeting</td>
+              <td>5/11/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>Planning Board - Special Meeting</td>
+              <td>5/11/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami</td>
+              <td>City Commission - Regular Meeting</td>
+              <td>5/11/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>Sustainability and Resiliency Committee Meeting</td>
+              <td>5/10/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami Beach</td>
+              <td>Land Use and Development Committee Meeting</td>
+              <td>5/10/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>Miami-Dade County</td>
+              <td>Building Safer Neighborhoods Subcommittee Meeting</td>
+              <td>5/8/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>Miami-Dade County</td>
+              <td>Housing and Social Services Committee Meeting</td>
+              <td>5/8/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>City of Miami</td>
+              <td>Planning Zoning and Appeal Board Meeting</td>
+              <td>5/3/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+            <tr>
+              <td>Miami-Dade County</td>
+              <td>Board of County Commissioners Meeting</td>
+              <td>5/2/17</td>
+              <td><%= link_to "Download agenda", "", class: "btn btn-outline-primary btn-sm" %></td>
+              <td><%= link_to "Download minutes", "", class: "btn btn-outline-primary btn-sm" %></td>
+            </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

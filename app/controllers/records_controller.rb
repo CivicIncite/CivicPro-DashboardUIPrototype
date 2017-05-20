@@ -1,9 +1,13 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: [:edit, :update, :destroy]
 
-  def index
+  def dashboard
     @records = Record.order('date DESC')
     @lobbyists = Lobbyist.order('date DESC')
+  end
+
+  def index
+    @records = Record.order('date DESC')
   end
 
   def new
@@ -51,13 +55,10 @@ class RecordsController < ApplicationController
     end
   end
 
-  def legislative_archives
+  def archives
   end
 
   def preferences
-  end
-
-  def code_amendments
   end
 
   private
