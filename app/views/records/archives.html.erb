@@ -5,41 +5,46 @@
           <h4 class="mb-4 mr-4">Legislative Archives</h4>
           <form method="GET">
               <div class="row mb-4">
-                  <div class="col-sm-12 col-md-6">
-                    <label for="">Search</label>
-                    <input type="text" class="form-control" name='term' placeholder="Search for topic or keyword" <% if(params.has_key?(:term)) %>value="<%= params[:term]%>"<%end%>>
+                  <div class="col-sm-12">
+                    <div class="input-group">
+                      <input type="text" class="form-control" name='term' placeholder="Search for topic or keyword" <% if(params.has_key?(:term)) %>value="<%= params[:term]%>"<%end%>>
+                      <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                      </span>
+                    </div>
                   </div>
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-sm-12 mt-4">
                       <div class="row">
-                          <div class="col-sm-12 col-md-6">
+                          <div class="col-sm-3">
                                 <label for="">Government</label>
                                 <input type="text" class="form-control mb-4" placeholder="Government">
-                                <label for="">Start Date</label>
-                                <input type="date" class="form-control" placeholder="Start date" aria-describedby="basic-addon1">
                           </div>
-                          <div class="col-sm-12 col-md-6">
-                                <label for="">Agency</label>
-                                <input type="text" class="form-control mb-4" placeholder="Agency">
-                                <label for="">End Date</label>
-                                <input type="date" class="form-control" placeholder="End date" aria-describedby="basic-addon1">
+                          <div class="col-sm-3">
+                            <label for="">Agency</label>
+                            <input type="text" class="form-control mb-4" placeholder="Agency">
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="">Start Date</label>
+                            <input type="date" class="form-control" placeholder="Start date" aria-describedby="basic-addon1">
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="">End Date</label>
+                            <input type="date" class="form-control" placeholder="End date" aria-describedby="basic-addon1">
                           </div>
                       </div>
                   </div>
-              </div>
-              <div class="d-flex justify-content-end">
-                  <button type="submit" class="btn btn-primary mb-6">Search</button>
               </div>
           </form>
       </div>
       <% if(params.has_key?(:term)) %>
         <p class="font-italic">Displaying results for "<%= params[:term] %>"</p>
       <% end %>
-      <table class="table">
+      <table class="table table-striped">
         <thead>
           <tr>
-            <th>Government</th>
+            <th class="is-sortable">Government <%= fa_icon "chevron-down"%></th>
             <th>Meeting</th>
-            <th>Date</th>
+            <th class="is-sortable">Date <%= fa_icon "chevron-down"%></th>
             <th>Agenda</th>
             <th>Minutes</th>
           </tr>

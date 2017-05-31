@@ -8,8 +8,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
-# Use react for some front-end wizardry
-gem "react-rails"
 # Use bootstrap as a base
 gem 'bootstrap', '~> 4.0.0.alpha6'
 source 'https://rails-assets.org' do
