@@ -10,8 +10,7 @@
               </div>
               <div class="row mt-4">
                   <div class="col-sm-4">
-                      <select>
-                          <option selected>All record types</option>
+                      <select class="record-type" multiple="multiple">
                           <option value="1">Code Amendments</option>
                           <option value="2">Legislative Status</option>
                           <option value="3">Lobbyist Registrations</option>
@@ -19,16 +18,14 @@
                       </select>
                   </div>
                   <div class="col-sm-4">
-                      <select>
-                          <option selected>All governments</option>
+                      <select class="governments" multiple>
                           <option value="1">City of Miami</option>
                           <option value="2">Miami-Dade County</option>
                           <option value="3">Miami Beach</option>
                       </select>
                   </div>
                   <div class="col-sm-4">
-                      <select>
-                          <option selected>All agencies</option>
+                      <select class="agencies" multiple>
                           <option value="1">City Commission</option>
                       </select>
                   </div>
@@ -70,3 +67,15 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(".record-type").select2({
+    placeholder: "Record type"
+  });
+  $(".governments").select2({
+    placeholder: "Governments"
+  });
+  $(".agencies").select2({
+    placeholder: "Agencies"
+  });
+</script>
