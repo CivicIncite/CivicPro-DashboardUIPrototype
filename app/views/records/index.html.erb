@@ -3,55 +3,61 @@
     <div class="col-sm-12">
       <div class="mb-4">
           <h4 class="mb-4 mr-4">Code Amendments</h4>
-          <form action="index.html" method="post">
+          <form method="GET">
               <div class="row mb-4">
-                  <div class="col-sm-12 col-md-6">
-                    <label for="">Search</label>
-                    <input type="text" class="form-control" placeholder="Search for topic or keyword">
+                  <div class="col-sm-12">
+                    <div class="input-group">
+                      <input type="text" class="form-control" name='term' placeholder="Search for topic or keyword" <% if(params.has_key?(:term)) %>value="<%= params[:term]%>"<%end%>>
+                      <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                      </span>
+                    </div>
                   </div>
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-sm-12 mt-4">
                       <div class="row">
-                          <div class="col-sm-12 col-md-6">
+                          <div class="col-sm-3">
                                 <label for="">Government</label>
                                 <input type="text" class="form-control mb-4" placeholder="Government">
-                                <label for="">Start Date</label>
-                                <input type="date" class="form-control" placeholder="Start date" aria-describedby="basic-addon1">
                           </div>
-                          <div class="col-sm-12 col-md-6">
-                                <label for="">Agency</label>
-                                <input type="text" class="form-control mb-4" placeholder="Agency">
-                                <label for="">End Date</label>
-                                <input type="date" class="form-control" placeholder="End date" aria-describedby="basic-addon1">
+                          <div class="col-sm-3">
+                            <label for="">Agency</label>
+                            <input type="text" class="form-control mb-4" placeholder="Agency">
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="">Start Date</label>
+                            <input type="date" class="form-control" placeholder="Start date" aria-describedby="basic-addon1">
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="">End Date</label>
+                            <input type="date" class="form-control" placeholder="End date" aria-describedby="basic-addon1">
                           </div>
                       </div>
                   </div>
               </div>
-              <div class="d-flex justify-content-end">
-                  <button type="submit" name="button" class="btn btn-primary mb-6">Search</button>
-              </div>
           </form>
       </div>
-      <table class="table">
+      <% if(params.has_key?(:term)) %>
+        <p class="font-italic">Displaying results for "<%= params[:term] %>"</p>
+      <% end %>
+      <table class="table table-striped">
         <thead>
           <tr>
             <th>Description</th>
-            <th>Government</th>
-            <th>Agency</th>
-            <th>Date</th>
+            <th class="is-sortable">Government <%= fa_icon "chevron-down"%></th>
+            <th class="is-sortable">Agency <%= fa_icon "chevron-down"%></th>
+            <th class="is-sortable">Date <%= fa_icon "chevron-down"%></th>
             <th>Agenda Link</th>
           </tr>
         </thead>
         <% @records.each do |record| %>
             <% if record.record_type == "Code Amendments" %>
               <tr>
-                <td><%= record.description %></td>
+                <td class="text-justify font-14"><%= record.description %></td>
                 <td><%= record.government %></td>
                 <td><%= record.agency %></td>
                 <td class="text-nowrap"><%= record.date.strftime("%b %d, %Y at %l:%M %p") %></td>
                 <td>
-                    <% if record.url %>
-                        <%= link_to "Download agenda", record.url, class: "btn btn-outline-primary btn-sm" %>
-                    <% end %>
+                  <%= link_to "Download agenda", record.url, class: "btn btn-outline-primary btn-sm" %>
                 </td>
               </tr>
             <% end %>

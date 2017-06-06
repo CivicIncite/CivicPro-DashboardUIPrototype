@@ -2,46 +2,30 @@
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
       <div class="mb-4">
-          <h4 class="mb-4 mr-4">Subscription Preferences</h4>
-          <div class="subscription d-flex justify-content-between align-items-center p-3 mb-3">
-              <p class="mb-0 mr-3">Subscribe to <span class="highlight">code amendments and public meetings</span> in <span class="highlight">all jurisdictions</span> that match the terms <span class="highlight">"short-term rental" or "AirBnB"</span></p>
-              <div class="d-flex justify-content-end">
-                  <a href="#" class="mr-3">Edit</a>
-                  <a href="#">Unsubscribe</a>
-              </div>
-          </div>
-          <div class="subscription d-flex justify-content-between align-items-center p-3 mb-3">
-              <p class="mb-0 mr-3">Subscribe to <span class="highlight">public meetings</span> in <span class="highlight">Miami-Dade County</span> that match the terms <span class="highlight">"bike lanes" and "bike safety"</span></p>
-              <div class="d-flex justify-content-end">
-                  <a href="#" class="mr-3">Edit</a>
-                  <a href="#">Unsubscribe</a>
-              </div>
-          </div>
-          <div class="col-sm-12 mt-5">
+          <div class="col-sm-12 mb-5">
+              <h4 class="mb-4 mr-4">Subscription Preferences</h4>
+              <h5 class="mb-3">Add a new subscription:</h5>
               <div class="mb-4">
-                  <label for="">Add a subscription</label>
                   <input type="text" class="form-control" placeholder="Search for topic or keyword">
               </div>
               <div class="row mt-4">
                   <div class="col-sm-4">
-                      <select>
-                          <option selected>All record types</option>
+                      <select class="record-type" multiple="multiple">
                           <option value="1">Code Amendments</option>
                           <option value="2">Legislative Status</option>
-                          <option value="3">Public Meetings</option>
+                          <option value="3">Lobbyist Registrations</option>
+                          <option value="4">Public Meetings</option>
                       </select>
                   </div>
                   <div class="col-sm-4">
-                      <select>
-                          <option selected>All governments</option>
+                      <select class="governments" multiple>
                           <option value="1">City of Miami</option>
                           <option value="2">Miami-Dade County</option>
                           <option value="3">Miami Beach</option>
                       </select>
                   </div>
                   <div class="col-sm-4">
-                      <select>
-                          <option selected>All agencies</option>
+                      <select class="agencies" multiple>
                           <option value="1">City Commission</option>
                       </select>
                   </div>
@@ -64,7 +48,34 @@
                   </div>
               </div>
           </div>
+          <h5 class="mb-3">Current subscriptions:</h5>
+          <div class="subscription d-flex justify-content-between align-items-center p-3 mb-3">
+              <p class="mb-0 mr-3">Subscribe to <span class="highlight">code amendments and public meetings</span> in <span class="highlight">all jurisdictions</span> that match the terms <span class="highlight">"short-term rental" or "AirBnB"</span></p>
+              <div class="d-flex justify-content-end">
+                  <a href="#" class="mr-3">Edit</a>
+                  <a href="#">Unsubscribe</a>
+              </div>
+          </div>
+          <div class="subscription d-flex justify-content-between align-items-center p-3 mb-3">
+              <p class="mb-0 mr-3">Subscribe to <span class="highlight">public meetings</span> in <span class="highlight">Miami-Dade County</span> that match the terms <span class="highlight">"signs" or "billboards" or "murals"</span></p>
+              <div class="d-flex justify-content-end">
+                  <a href="#" class="mr-3">Edit</a>
+                  <a href="#">Unsubscribe</a>
+              </div>
+          </div>
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(".record-type").select2({
+    placeholder: "Record type"
+  });
+  $(".governments").select2({
+    placeholder: "Governments"
+  });
+  $(".agencies").select2({
+    placeholder: "Agencies"
+  });
+</script>

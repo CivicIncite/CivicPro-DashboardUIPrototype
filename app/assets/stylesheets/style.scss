@@ -16,10 +16,11 @@ body {
   .nav-link {
     font-size: (14 / 16) * 1em;
     font-weight: $font-weight-heavy;
-    padding: .75rem 0;
+    padding: 1rem 0;
 
     &.active {
       border-bottom: 3px solid $blue-primary;
+      padding-bottom: 13px;
     }
 
     i {
@@ -29,7 +30,6 @@ body {
 
   .form-control {
     background: $gray-6;
-    border-radius: 2em;
     border: 1px solid $gray-5;
     color: $gray-3;
     font-family: $primary-font;
@@ -194,7 +194,7 @@ a,
 }
 
 .record-item-star {
-  color: $gray-4;
+  color: $gray-1;
   font-size: 1em;
   transition: color .2s ease-in;
 
@@ -299,4 +299,32 @@ td {
 .highlight {
     font-weight: $font-weight-heavy;
     color: $blue-2;
+}
+
+.is-sortable:hover {
+  color: $gray-1;
+  cursor: pointer;
+}
+
+th {
+  white-space: nowrap;
+}
+
+.table-striped {
+
+  tbody tr:nth-child(2n) {
+    background: $gray-6;
+  }
+
+  tbody tr:nth-child(2n-1) {
+    background: $white !important;
+  }
+}
+
+.font-14 {
+  font-size: (14 / 16) * 1rem;
+}
+
+.select2 {
+  width: 100% !important;
 }
